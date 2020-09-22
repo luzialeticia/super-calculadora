@@ -24,13 +24,24 @@ const exponent = (num) => Math.pow(num, 2)
 
 const divider = (num) => {
    const dividers = []
+   let howMuchDividers;
+   let dividersToString;
+   let dividersToPlural = `divisor`
 
    for (let i = 1; i <= num; i++) {
        if (num % i === 0) {
            dividers.push(i)
        }
    }
-   return dividers
+
+   howMuchDividers = dividers.length
+   dividersToString = dividers.join(', ')
+
+   if (howMuchDividers > 1) {
+       dividersToPlural = `divisores`
+   }
+   
+   return `${dividersToString} (${howMuchDividers} ${dividersToPlural})`
 }
 
 const factorial = (num) => {
