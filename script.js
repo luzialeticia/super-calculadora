@@ -35,13 +35,13 @@ const divider = (num) => {
 
 const factorial = (num) => {
     if (num <= 21) {
-        let fatorial = 1
+        let factorial = 1
 
         for (let i = 1; i <= num; i++) {
-            fatorial = fatorial * i
+            factorial = factorial * i
         }
-        return fatorial
+        return factorial
     } else {
-        return `Nº muito granda para calcular o fatorial.`
+        return `Número muito grande.`
     }
 }
