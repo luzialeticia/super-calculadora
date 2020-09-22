@@ -9,15 +9,15 @@
     <div class="container">
         <div class="numbers">
             <label for="numberA">Número A</label>
-            <input type="number" class="numbers-active" id="numberA">
+            <input type="number" class="numbers-active" id="numberA" onfocus="calcular()">
 
             <label for="numberB">Número B</label>
-            <input type="number" class="numbers-active" id="numberB">
+            <input type="number" class="numbers-active" id="numberB" onfocus="calcular()">
         </div>
 
         <div class="results">
             <label for="sum">Soma: A + B</label>
-            <input type="number" class="results" id="sum" disabled>
+            <input type="number" class="results" id="sum" value="" disabled>
 
             <label for="subtractionA">Subtração: A - B</label>
             <input type="number" class="results" id="subtractionA" disabled>
@@ -53,5 +53,7 @@
             <input type="number" class="results" id="factorialB" disabled>
         </div>
     </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
