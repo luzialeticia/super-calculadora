@@ -40,7 +40,7 @@ const divider = (num) => {
    if (howMuchDividers > 1) {
        dividersToPlural = `divisores`
    }
-   
+
    return `${dividersToString} (${howMuchDividers} ${dividersToPlural})`
 }
 
