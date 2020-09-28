@@ -1,7 +1,7 @@
-let inputA = null, inputB = null, inputSum = null, inputSub = null, inputMult = null, inputDivA = null, inputDivB = null, powA = null, powB = null, dividerA = null, dividerB = null, factA = null, factB = null
+function calcular() {
+    const numberA = document.getElementById("numberA").valueAsNumber
+    const numberB = document.getElementById("numberB").valueAsNumber
 
-
-const calcular = (event) => {
     const sum = (a, b) => a + b
 
     const subtractionA = (a, b) => a - b
@@ -51,7 +51,6 @@ const calcular = (event) => {
     const factorial = (num) => {
         if (num <= 21) {
             let factorial = 1
-    
             for (let i = 1; i <= num; i++) {
                 factorial = factorial * i
             }
@@ -60,10 +59,18 @@ const calcular = (event) => {
             return `Número muito grande.`
         }
     }
-    
-    const numberA = document.getElementById('numberA').valueAsNumber
-    const numberB = document.getElementById('numberB').valueAsNumber
-    let resultSum = document.getElementById('sum').valueAsNumber
-    
-    resultSum = sum(numberA, numberB)
+
+//Resultados:
+    document.getElementById('sum').valueAsNumber = sum(numberA, numberB)
+    document.getElementById('subtractionA').valueAsNumber = subtractionA(numberA, numberB)
+    document.getElementById('subtractionB').valueAsNumber = subtractionB(numberA, numberB)
+    document.getElementById('multiplication').valueAsNumber = multiplication(numberA, numberB)
+    document.getElementById('divisionA').valueAsNumber = divisionA(numberA, numberB).toFixed(2)
+    document.getElementById('divisionB').valueAsNumber = divisionB(numberA, numberB).toFixed(2)
+    document.getElementById('exponentBaseA').valueAsNumber = exponent(numberA)
+    document.getElementById('exponentBaseB').valueAsNumber = exponent(numberB)
+    document.getElementById('dividerA').value = divider(numberA)
+    document.getElementById('dividerB').value = divider(numberB)
+    document.getElementById('factorialA').value = factorial(numberA)
+    document.getElementById('factorialB').value = factorial(numberB)
 }
