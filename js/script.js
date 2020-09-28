@@ -1,4 +1,4 @@
-function calcular() {
+function calculate() {
     const numberA = document.getElementById("numberA").valueAsNumber
     const numberB = document.getElementById("numberB").valueAsNumber
 
