@@ -1,4 +1,7 @@
-const calcular = () => {
+let inputA = null, inputB = null, inputSum = null, inputSub = null, inputMult = null, inputDivA = null, inputDivB = null, powA = null, powB = null, dividerA = null, dividerB = null, factA = null, factB = null
+
+
+const calcular = (event) => {
     const sum = (a, b) => a + b
 
     const subtractionA = (a, b) => a - b
