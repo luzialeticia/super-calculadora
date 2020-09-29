@@ -2,12 +2,11 @@ let numberA;
 let numberB;
 
 function start() {
-    numberA = document.getElementById("numberA").valueAsNumber
-    numberB = document.getElementById("numberB").valueAsNumber
+    numberA = document.querySelector("#numberA")
+    numberB = document.querySelector("#numberB")
 
     preventFormSubmit()
     activateInput()
-    calculate()
 }
 
 function preventFormSubmit() {
@@ -19,12 +18,16 @@ function preventFormSubmit() {
     form.addEventListener('submit', handleFormSubmit)
 }
 
-
+function activateInput() {
+    numberA.focus()
+    numberA.value = ''
+    numberB.value = ''
+}
 
 
 function calculate() {
-    // numberA = document.getElementById("numberA").valueAsNumber
-    // numberB = document.getElementById("numberB").valueAsNumber
+    numberA = document.getElementById("numberA").valueAsNumber
+    numberB = document.getElementById("numberB").valueAsNumber
 
     const sum = (a, b) => a + b
 
