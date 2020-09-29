@@ -1,6 +1,30 @@
+let numberA;
+let numberB;
+
+function start() {
+    numberA = document.getElementById("numberA").valueAsNumber
+    numberB = document.getElementById("numberB").valueAsNumber
+
+    preventFormSubmit()
+    activateInput()
+    calculate()
+}
+
+function preventFormSubmit() {
+    function handleFormSubmit(event) {
+        event.preventDefault()
+    }
+    const form = document.querySelector('form')
+
+    form.addEventListener('submit', handleFormSubmit)
+}
+
+
+
+
 function calculate() {
-    const numberA = document.getElementById("numberA").valueAsNumber
-    const numberB = document.getElementById("numberB").valueAsNumber
+    // numberA = document.getElementById("numberA").valueAsNumber
+    // numberB = document.getElementById("numberB").valueAsNumber
 
     const sum = (a, b) => a + b
 
@@ -74,3 +98,5 @@ function calculate() {
     document.getElementById('factorialA').value = factorial(numberA)
     document.getElementById('factorialB').value = factorial(numberB)
 }
+
+start()
